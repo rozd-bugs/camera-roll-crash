@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="camera-roll-crash">
+    <configurations>
+      <configuration name="camera-roll-crash" target-platform="Mobile" pure-as="true" main-class="CameraRollCrash" output-file="Main.swf" output-folder="$USER_HOME$/dev/mobitile/client/mobitile/out/production/camera-roll-crash">
+        <dependencies target-player="12.0">
+          <entries>
+            <entry library-id="a9cd2c4e-00de-4e7a-a6cc-a4853b4a05a4">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="15.0.0.356" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop />
+        <packaging-android package-file-name="Main" />
+        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/CameraRollCrash-app.xml" package-file-name="CameraRollCrash">
+          <AirSigningOptions keystore-path="$USER_HOME$/ios/certificate/ios_air_development.p12" provisioning-profile-path="$USER_HOME$/ios/provisioning/Generic_Profile.mobileprovision" />
+        </packaging-ios>
+      </configuration>
+      <configuration name="air-15-crash-cameraroll-stagetext" target-platform="Mobile" pure-as="true" main-class="AIR15Crash" output-file="air-15-crash-cameraroll-stagetext.swf" output-folder="$USER_HOME$/dev/mobitile/client/mobitile/out/production/camera-roll-crash">
+        <dependencies>
+          <entries>
+            <entry library-id="578cbeef-4275-422d-8dea-bd5b38aba333">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry module-name="starling" build-configuration-name="starling">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry module-name="feathers" build-configuration-name="feathers">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="15.0.0.356" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop />
+        <packaging-android package-file-name="air-15-crash-cameraroll-stagetext" />
+        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/AIR15Crash-app.xml" package-file-name="air-15-crash-cameraroll-stagetext">
+          <AirSigningOptions keystore-path="$USER_HOME$/ios/certificate/ios_air_development.p12" provisioning-profile-path="$USER_HOME$/ios/provisioning/Generic_Profile.mobileprovision" />
+        </packaging-ios>
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

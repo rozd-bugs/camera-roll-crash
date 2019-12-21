@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_camera-roll-crash" default="compile.module.camera-roll-crash">
+  <dirname property="module.camera-roll-crash.basedir" file="${ant.file.module_camera-roll-crash}"/>
+  
+  <property name="module.jdk.home.camera-roll-crash" value="${jdk.home.15.0.0.356}"/>
+  <property name="module.jdk.bin.camera-roll-crash" value="${jdk.bin.15.0.0.356}"/>
+  <property name="module.jdk.classpath.camera-roll-crash" value="jdk.classpath.15.0.0.356"/>
+  
+  <property name="compiler.args.camera-roll-crash" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="camera-roll-crash.output.dir" value="${module.camera-roll-crash.basedir}/../../dev/mobitile/client/mobitile/out/production/camera-roll-crash"/>
+  <property name="camera-roll-crash.testoutput.dir" value="${module.camera-roll-crash.basedir}/../../dev/mobitile/client/mobitile/out/test/camera-roll-crash"/>
+  
+  <path id="camera-roll-crash.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="camera-roll-crash.module.production.classpath">
+    <path refid="${module.jdk.classpath.camera-roll-crash}"/>
+  </path>
+  
+  <path id="camera-roll-crash.runtime.production.module.classpath">
+    <pathelement location="${camera-roll-crash.output.dir}"/>
+  </path>
+  
+  <path id="camera-roll-crash.module.classpath">
+    <path refid="${module.jdk.classpath.camera-roll-crash}"/>
+    <pathelement location="${camera-roll-crash.output.dir}"/>
+  </path>
+  
+  <path id="camera-roll-crash.runtime.module.classpath">
+    <pathelement location="${camera-roll-crash.testoutput.dir}"/>
+    <pathelement location="${camera-roll-crash.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.camera-roll-crash">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.camera-roll-crash">
+    <patternset refid="excluded.from.module.camera-roll-crash"/>
+  </patternset>
+  
+  
+  <target name="compile.module.camera-roll-crash" depends="compile.module.camera-roll-crash.production,compile.module.camera-roll-crash.tests" description="Compile module camera-roll-crash"/>
+  
+  <target name="compile.module.camera-roll-crash.production" depends="register.custom.compilers,compile.module.feathers,compile.module.starling" description="Compile module camera-roll-crash; production classes"/>
+  
+  <target name="compile.module.camera-roll-crash.tests" depends="register.custom.compilers,compile.module.camera-roll-crash.production" description="compile module camera-roll-crash; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.camera-roll-crash" description="cleanup module">
+    <delete dir="${camera-roll-crash.output.dir}"/>
+    <delete dir="${camera-roll-crash.testoutput.dir}"/>
+  </target>
+</project>
